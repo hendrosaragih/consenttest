@@ -1,0 +1,21 @@
+<html>
+<script src='https://cdn-app2.securiti.ai/consent/form-consent-sdk.js'></script>
+<script>
+window.addEventListener('load',
+    FormConsentSDK.initialize({
+        codeGenMetadata:{"formPropertyId":"3","formSelector":"[Name*=\"Name\"]","subjectIdentifiers":[{"name":"KTP","selector":"KTP","isPrimary":true}],"consentIdentifiers":[{"type":"checkbox","name":"Consent Mandatory","selector":"Consent Mandatory","propertyId":98,"consentValue":"checked"},{"type":"checkbox","name":"Consent Option 1","selector":"Consent Option 1","propertyId":99,"consentValue":"checked"},{"type":"checkbox","name":"Consent Option 2","selector":"Consent Option 2","propertyId":100,"consentValue":"checked"}],"consentTrigger":{"action":"submit","selector":""}},
+        url: 'https://app2.securiti.ai/privaci/v1/',
+        authToken:'d599c8b5-2fe6-4a24-9389-0195580d2698',
+        orgId:'1',
+        onConsentSuccess: null,
+        onConsentFailure: null
+    })
+)
+</script>
+<body>
+<form name="form1">
+
+</form>
+hi, test page
+</body>
+</html>
