@@ -9,5 +9,18 @@ NIK : <input type="text" name="nik" value=""><br>
 <input type="checkbox" name="check3">xxxx <br>
 <input type="submit"  name="submit" value="Submit">
 </form>
+<script src='https://cdn-app2.securiti.ai/consent/form-consent-sdk.js'></script>
+<script>
+window.addEventListener('load',
+    FormConsentSDK.initialize({
+        codeGenMetadata:{"formPropertyId":"5","formSelector":"[name*=\"submitform\"]","subjectIdentifiers":[{"name":"name_person","selector":"[name = \"name_person\"]","isPrimary":false},{"name":"nik","selector":"[name = \"nik\"]","isPrimary":true},{"name":"submit","selector":"[name = \"submit\"]","isPrimary":false}],"consentIdentifiers":[{"type":"checkbox","name":"check1","selector":"[name = \"check1\"]","propertyId":105,"consentValue":"checked"},{"type":"checkbox","name":"check2","selector":"[name = \"check2\"]","propertyId":106,"consentValue":"checked"},{"type":"checkbox","name":"check3","selector":"[name = \"check3\"]","propertyId":107,"consentValue":"checked"}],"consentTrigger":{"action":"click","selector":"[type=\"submit\"]"}},
+        url: 'https://app2.securiti.ai/privaci/v1/',
+        authToken:'d599c8b5-2fe6-4a24-9389-0195580d2698',
+        orgId:'1',
+        onConsentSuccess: null,
+        onConsentFailure: null
+    })
+)
+</script>
 </body>
 </html>
